@@ -1,24 +1,24 @@
-Ej29.png : Ej29.dat Ejercicio29.py
-	python Ejercicio29.py
+Ej30.png : Ej30.dat Ejercicio30.py
+	python Ejercicio30.py
 
-Ej29.dat : Ejer.x
+Ej30.dat : Ejer.x
 	./Ejer.x
 
-Ejer29.png : Ejer29.dat Ejercicio29.py
-	python Ejercicio29.py
+Ejer30.png : Ejer30.dat Ejercicio30.py
+	python Ejercicio30.py
 
-Ejer29.dat : Ejer.x
+Ejer30.dat : Ejer.x
 	./Ejer.x
 
 
-Ejercicio29.png  : Ejercicio29.dat Ejercicio29.py
-	python Ejercicio29.py
+Ejercicio30.png  : Ejercicio30.dat Ejercicio30.py
+	python Ejercicio30.py
 
-Ejercicio29.dat  : Ejer.x
+Ejercicio30.dat  : Ejer.x
 	./Ejer.x 
 
-Ejer.x : MercadoLaura_Ejercicio29.cpp
-	c++ MercadoLaura_Ejercicio29.cpp -o Ejer.x
+Ejer.x : MercadoLaura_Ejercicio30.cpp
+	c++ MercadoLaura_Ejercicio30.cpp -o Ejer.x
 	
 clean:
-	rm Ejer.x Ejercicio29.dat Ejercicio29.png
+	rm -r *.x *.dat *.png
