@@ -39,7 +39,7 @@ int main (){
     for(j = 0; j < nt - 1; j++){
         for(i=1; i<nx-1; i++){
             x=i*deltax;
-            C[i][j+1] = C[i][j] + (D*deltat/(deltax*deltax))*(C[i+1][j-1] - 2*C[i][j-1] + C[i-1][j-1]);
+            C[i][j+1] = C[i-1][j] + 1/2.0*(C[i-1][j+1]) - (C[i-1][j])  + 1/2.0*(C[i-1][j-1])  + ((s*deltax*deltax)/(2.0*D));
         }                                             
         C[0][j+1]=0.0;                                      
         C[nx-1][j+1]=0.0;                          
@@ -73,7 +73,8 @@ int main (){
     for(j = 0; j < nt - 1; j++){
         for(i=1; i<vax-1; i++){
             x=i*deltax2;
-            N[i][j+1] = N[i][j] + (D*deltat2/(deltax2*deltax2))*(N[i+1][j-1] - 2*N[i][j-1] + N[i-1][j-1]);
+            N[i][j+1] = N[i-1][j] + 1/2.0*(N[i-1][j+1]) - (N[i-1][j])  + 1/2.0*(N[i-1][j-1])  + ((s*deltax2*deltax2)/(2.0*D));
+                        
         }                                             
         N[0][j+1]=0.0;                                      
         N[vax-1][j+1]=0.0;                          
@@ -107,7 +108,8 @@ int main (){
     for(j = 0; j < nt - 1; j++){
         for(i=1; i<dax-1; i++){
             x=i*deltax3;
-            T[i][j+1] = T[i][j] + (D*deltat3/(deltax3*deltax3))*(T[i+1][j-1] - 2*T[i][j-1] + T[i-1][j-1]);
+            T[i][j+1] = T[i-1][j] + 1/2.0*(T[i-1][j+1]) - (T[i-1][j])  + 1/2.0*(T[i-1][j-1])  + ((s*deltax3*deltax3)/(2.0*D));
+           
         }                                             
         T[0][j+1]=0.0;                                      
         T[dax-1][j+1]=0.0;                          
